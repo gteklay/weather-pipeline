@@ -1,0 +1,18 @@
+# 🔒 CRITICAL SECURITY EXCLUSIONS
+*.pem
+*.crt
+*.key
+*.p12
+*.json
+*.env
+gcp_key.json
+
+# Local system caches and environments
+__pycache__/
+*.pyc
+.pytest_cache/
+dbt_venv/
+
+# Local dbt execution outputs
+dbt_weather/target/
+dbt_weather/logs/
