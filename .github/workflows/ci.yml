@@ -1,0 +1,55 @@
+# .github/workflows/ci.yml
+name: Data Platform Continuous Integration Guardrail
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  code-quality-assessment:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # 1. Pull down your repository code files into the GitHub cloud worker node
+    - name: Checkout Code Repository
+      uses: actions/checkout@v4
+
+    # 2. Instantiate an isolated, stable Python environment environment pool
+    - name: Initialize Python Runtime Env
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+
+    # 3. Download and cache core processing libraries to keep build times under 15 seconds
+    - name: Install Ingestion Core Packages
+      run: |
+        python -m pip install --upgrade pip
+        pip install ruff pydantic polars requests
+        
+    # 4. ⚡ HIGH-PERFORMANCE LINTER: Automatically scans your code for syntax issues or typos
+    - name: Execute Static Linting Analysis (Ruff)
+      run: |
+        # Ruff scans your scripts instantly and highlights syntax irregularities
+        python -m ruff check dags/
+
+    # 5. RUNTIME VALIDATION CHECK: Forces your SchemaCreator constructor method to execute mock tests
+    - name: Run SchemaCreator Data Contract Validation Tests
+      run: |
+        # Simulates a raw network byte array to verify your Pydantic data firewall works perfectly
+        python -c "
+        import sys
+        sys.path.append('dags')
+        from utils import SchemaCreator
+        
+        # Mock payload containing a dropped visibility key to simulate clear skies
+        mock_payload = b'{\"lat\": 49.1900, \"lon\": -122.8400, \"timezone\": \"America/Vancouver\", \"timezone_offset\": -25200, \"data\": [{\"dt\": 1710000000, \"temp\": 14.5, \"feels_like\": 13.2, \"pressure\": 1012, \"humidity\": 65, \"dew_point\": 7.8, \"uvi\": 2.5, \"clouds\": 40, \"wind_speed\": 12.4, \"weather\": [{\"id\": 800}]}]}'
+        
+        try:
+            validated_output = SchemaCreator.from_raw_payload(mock_payload)
+            print('✅ CI/CD Validation Pass: SchemaCreator handled payload variant and Pydantic tests perfectly!')
+        except Exception as e:
+            print(f'❌ CI/CD Validation Failed: {e}')
+            sys.exit(1)
+        "
