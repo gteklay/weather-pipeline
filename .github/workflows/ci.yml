@@ -32,7 +32,7 @@ jobs:
     - name: Execute Static Linting Analysis (Ruff)
       run: |
         # Ruff scans your scripts instantly and highlights syntax irregularities
-        python -m ruff check dags/
+        python -m ruff check dags/ --fix
 
     # 5. RUNTIME VALIDATION CHECK: Forces your SchemaCreator constructor method to execute mock tests
     - name: Run SchemaCreator Data Contract Validation Tests
