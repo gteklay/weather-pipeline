@@ -1,0 +1,25 @@
+name: 'dbt_weather'
+version: '1.0.0'
+config-version: 2
+
+
+# ⚡ LINKS DIRECTLY TO YOUR CREDENTIALS PROFILE HEADER BELOW
+profile: 'weather_profile'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  dbt_weather:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

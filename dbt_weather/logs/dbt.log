@@ -1,0 +1,1066 @@
+[0m22:13:37.281855 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70f4bb7e6270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70f4ba423d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70f4ba4239d0>]}
+
+
+============================== 22:13:37.284209 | 9cb30b82-6bf7-43e5-86c0-3581a4f2bac4 ==============================
+[0m22:13:37.284209 [info ] [MainThread]: Running with dbt=1.12.3
+[0m22:13:37.284565 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'hints_enabled': 'True', 'static_parser': 'True', 'cache_selected_only': 'False', 'empty': 'False', 'warn_error': 'None', 'no_print': 'None', 'printer_width': '80', 'fail_fast': 'False', 'log_format': 'default', 'use_experimental_parser': 'False', 'quiet': 'False', 'indirect_selection': 'eager', 'partial_parse': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'log_path': '/opt/airflow/dbt_weather/logs', 'version_check': 'True', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'invocation_command': 'dbt run --full-refresh --project-dir /opt/airflow/dbt_weather --profiles-dir /opt/airflow/dbt_weather', 'use_colors': 'True', 'debug': 'False', 'write_json': 'True', 'profiles_dir': '/opt/airflow/dbt_weather'}
+[0m22:13:40.533161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9cb30b82-6bf7-43e5-86c0-3581a4f2bac4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70f4bb529cd0>]}
+[0m22:13:40.579033 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9cb30b82-6bf7-43e5-86c0-3581a4f2bac4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70f4bcc1ead0>]}
+[0m22:13:40.579673 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m22:13:40.685158 [debug] [MainThread]: checksum: 65be7ef5e3cee717425a3451a46e8fb8f684c3baf1ea504b6451088e704b862e, vars: {}, profile: weather_profile, target: dev, version: 1.12.3
+[0m22:13:40.685657 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m22:13:40.685900 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9cb30b82-6bf7-43e5-86c0-3581a4f2bac4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70f499cbea50>]}
+[0m22:13:41.763089 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9cb30b82-6bf7-43e5-86c0-3581a4f2bac4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70f4bb991c70>]}
+[0m22:13:41.835624 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_weather/target/manifest.json
+[0m22:13:41.840564 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_weather/target/semantic_manifest.json
+[0m22:13:41.901044 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt_weather/target/osi_document.json
+[0m22:13:41.933941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9cb30b82-6bf7-43e5-86c0-3581a4f2bac4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70f4995683d0>]}
+[0m22:13:41.934319 [info ] [MainThread]: Found 2 models, 5 data tests, 1 source, 561 macros
+[0m22:13:41.934532 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9cb30b82-6bf7-43e5-86c0-3581a4f2bac4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70f498885570>]}
+[0m22:13:41.935816 [info ] [MainThread]: 
+[0m22:13:41.936097 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:13:41.936287 [info ] [MainThread]: 
+[0m22:13:41.936629 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:13:41.939491 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_weather-data-ingestion-506305'
+[0m22:13:41.939882 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:13:42.293298 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_weather-data-ingestion-506305, now list_weather-data-ingestion-506305_weather_data)
+[0m22:13:42.293646 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:13:42.706703 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9cb30b82-6bf7-43e5-86c0-3581a4f2bac4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70f498800b90>]}
+[0m22:13:42.707157 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:13:42.740399 [debug] [Thread-3 (]: Began running node model.dbt_weather.stg_hourly_history
+[0m22:13:42.740796 [info ] [Thread-3 (]: 1 of 2 START sql view model weather_data.stg_hourly_history .................... [RUN]
+[0m22:13:42.741106 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_weather-data-ingestion-506305_weather_data, now model.dbt_weather.stg_hourly_history)
+[0m22:13:42.741334 [debug] [Thread-3 (]: Began compiling node model.dbt_weather.stg_hourly_history
+[0m22:13:42.747203 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_weather.stg_hourly_history"
+[0m22:13:42.747768 [debug] [Thread-3 (]: Began executing node model.dbt_weather.stg_hourly_history
+[0m22:13:42.766145 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_weather.stg_hourly_history"
+[0m22:13:42.766929 [debug] [Thread-3 (]: On model.dbt_weather.stg_hourly_history: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "weather_profile", "target_name": "dev", "node_id": "model.dbt_weather.stg_hourly_history"} */
+
+
+  create or replace view `weather-data-ingestion-506305`.`weather_data`.`stg_hourly_history`
+  OPTIONS()
+  as WITH hourly_history_source AS (
+    --  FIXED: We use the explicit source() macro. 
+    -- dbt handles the backticks and hyphenated project string IDs automatically behind the scenes!
+    SELECT * FROM `weather-data-ingestion-506305`.`weather_data`.`raw_hourly_history`
+)
+
+SELECT
+    --  The columns are explicitly read out of your synchronized source map view
+    CAST(target_latitude AS FLOAT64) AS latitude,
+    CAST(target_longitude AS FLOAT64) AS longitude,
+    timezone_name,
+    CAST(timezone_offset AS INT64) AS timezone_offset,
+    CAST(temperature AS FLOAT64) AS temperature_celsius,
+    CAST(feels_like AS FLOAT64) AS feels_like_celsius,
+    CAST(humidity AS INT64) AS relative_humidity_percentage,
+    CAST(cloud_cover AS INT64) AS cloud_cover_percentage,
+    CAST(wind_speed AS FLOAT64) AS wind_speed_kmh,
+    CAST(weather_code AS INT64) AS weather_code,
+    CAST(dew_point AS FLOAT64) AS dew_point_celsius,
+    CAST(pressure AS INT64) AS atmospheric_pressure_hpa,
+    CAST(uv_index AS FLOAT64) AS uv_index,
+    CAST(visibility_meters AS INT64) AS visibility_meters,
+    observation_time AS observation_timestamp,
+    sunrise_time AS sunrise_timestamp,
+    sunset_time AS sunset_timestamp,
+    CAST(ingested_at AS TIMESTAMP) AS ingested_at_timestamp,
+    CAST(airflow_dag_id AS STRING) AS airflow_dag_id,
+    CAST(airflow_run_id AS STRING) AS airflow_run_id
+
+FROM hourly_history_source
+WHERE observation_time IS NOT NULL;
+
+
+[0m22:13:42.767274 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m22:13:43.479606 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=weather-data-ingestion-506305&j=bq:us-west1:e3d96b3d-ff47-4841-8e3b-2ee39291d233&page=queryresults
+[0m22:13:43.762907 [debug] [Thread-3 (]: SQL status: OK in 0.283 seconds
+[0m22:13:43.830788 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9cb30b82-6bf7-43e5-86c0-3581a4f2bac4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70f4986cc1b0>]}
+[0m22:13:43.831299 [info ] [Thread-3 (]: 1 of 2 OK created sql view model weather_data.stg_hourly_history ............... [[32mCREATE VIEW (0 processed)[0m in 1.09s]
+[0m22:13:43.831766 [debug] [Thread-3 (]: Finished running node model.dbt_weather.stg_hourly_history
+[0m22:13:43.832554 [debug] [Thread-4 (]: Began running node model.dbt_weather.fct_weather
+[0m22:13:43.833058 [info ] [Thread-4 (]: 2 of 2 START sql table model weather_data.fct_weather .......................... [RUN]
+[0m22:13:43.833494 [debug] [Thread-4 (]: Acquiring new bigquery connection 'model.dbt_weather.fct_weather'
+[0m22:13:43.833732 [debug] [Thread-4 (]: Began compiling node model.dbt_weather.fct_weather
+[0m22:13:43.835133 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_weather.fct_weather"
+[0m22:13:43.835536 [debug] [Thread-4 (]: Began executing node model.dbt_weather.fct_weather
+[0m22:13:43.841553 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:13:44.147197 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_weather.fct_weather"
+[0m22:13:44.147812 [debug] [Thread-4 (]: On model.dbt_weather.fct_weather: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "weather_profile", "target_name": "dev", "node_id": "model.dbt_weather.fct_weather"} */
+
+  
+    
+
+    create or replace table `weather-data-ingestion-506305`.`weather_data`.`fct_weather`
+      
+    
+    
+
+    
+    OPTIONS()
+    as (
+      WITH staging_data AS (
+    SELECT * FROM `weather-data-ingestion-506305`.`weather_data`.`stg_hourly_history`
+)
+
+SELECT
+    latitude,
+    longitude,
+    timezone_name,
+    timezone_offset,
+    temperature_celsius,
+    feels_like_celsius,
+    relative_humidity_percentage,
+    cloud_cover_percentage,
+    wind_speed_kmh,
+    weather_code,
+    dew_point_celsius,
+    atmospheric_pressure_hpa,
+    uv_index,
+    visibility_meters,
+    observation_timestamp,
+    
+    --  THE DYNAMIC LOCAL TIME CONVERTER: 
+    -- Automatically maps the time zone straight from your table's data stream row metrics!
+    DATETIME(observation_timestamp, timezone_name) AS observation_local_time,
+    
+    CASE 
+        WHEN observation_timestamp BETWEEN sunrise_timestamp AND sunset_timestamp THEN TRUE 
+        ELSE FALSE 
+    END AS is_daylight,
+    TIMESTAMP_DIFF(sunset_timestamp, observation_timestamp, HOUR) AS hours_until_sunset
+FROM staging_data
+    );
+  
+[0m22:13:44.765129 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=weather-data-ingestion-506305&j=bq:us-west1:b5019673-6242-41d7-85af-b32de30c28ed&page=queryresults
+[0m22:13:46.100543 [debug] [Thread-4 (]: SQL status: OK in 1.335 seconds
+[0m22:13:46.227872 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9cb30b82-6bf7-43e5-86c0-3581a4f2bac4', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70f49851a490>]}
+[0m22:13:46.228363 [info ] [Thread-4 (]: 2 of 2 OK created sql table model weather_data.fct_weather ..................... [[32mCREATE TABLE (25.0 rows, 3.4 KiB processed)[0m in 2.39s]
+[0m22:13:46.228733 [debug] [Thread-4 (]: Finished running node model.dbt_weather.fct_weather
+[0m22:13:46.229980 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:13:46.257784 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:13:46.258017 [debug] [MainThread]: Connection 'model.dbt_weather.stg_hourly_history' was properly closed.
+[0m22:13:46.258232 [debug] [MainThread]: Connection 'model.dbt_weather.fct_weather' was properly closed.
+[0m22:13:46.258473 [info ] [MainThread]: 
+[0m22:13:46.258708 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 4.32 seconds (4.32s).
+[0m22:13:46.259340 [debug] [MainThread]: Command end result
+[0m22:13:46.387382 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_weather/target/manifest.json
+[0m22:13:46.389268 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_weather/target/semantic_manifest.json
+[0m22:13:46.390948 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt_weather/target/osi_document.json
+[0m22:13:46.395380 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt_weather/target/run_results.json
+[0m22:13:46.395590 [info ] [MainThread]: 
+[0m22:13:46.395856 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:13:46.396052 [info ] [MainThread]: 
+[0m22:13:46.396260 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=2
+[0m22:13:46.396628 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 9.170407, "process_in_blocks": "411664", "process_kernel_time": 0.494589, "process_mem_max_rss": "266272", "process_out_blocks": "44104", "process_user_time": 4.685871}
+[0m22:13:46.397110 [debug] [MainThread]: Command `dbt run` succeeded at 22:13:46.397030 after 9.17 seconds
+[0m22:13:46.397356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70f4989ac450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70f4989ae1d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70f4ba46b000>]}
+[0m22:13:46.397583 [debug] [MainThread]: Flushing usage events
+[0m22:13:47.076895 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:15:29.610032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781f9a72a270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781f9935fd90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781f9935f9d0>]}
+
+
+============================== 22:15:29.612466 | 3d41253a-f30b-4733-9bf2-495793b0d801 ==============================
+[0m22:15:29.612466 [info ] [MainThread]: Running with dbt=1.12.3
+[0m22:15:29.612839 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'hints_enabled': 'True', 'empty': 'None', 'invocation_command': 'dbt test --project-dir /opt/airflow/dbt_weather --profiles-dir /opt/airflow/dbt_weather', 'profiles_dir': '/opt/airflow/dbt_weather', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'maximum_seed_size_mib': '1', 'log_path': '/opt/airflow/dbt_weather/logs', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'version_check': 'True', 'fail_fast': 'False', 'target_path': 'None', 'log_cache_events': 'False', 'printer_width': '80', 'log_format': 'default', 'debug': 'False', 'use_experimental_parser': 'False', 'warn_error': 'None', 'use_colors': 'True', 'no_print': 'None', 'quiet': 'False', 'cache_selected_only': 'False', 'indirect_selection': 'eager'}
+[0m22:15:30.157624 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3d41253a-f30b-4733-9bf2-495793b0d801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781f9a469cd0>]}
+[0m22:15:30.204861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '3d41253a-f30b-4733-9bf2-495793b0d801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781f9bb5ead0>]}
+[0m22:15:30.205508 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m22:15:30.311225 [debug] [MainThread]: checksum: 65be7ef5e3cee717425a3451a46e8fb8f684c3baf1ea504b6451088e704b862e, vars: {}, profile: weather_profile, target: dev, version: 1.12.3
+[0m22:15:30.412348 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:15:30.412697 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m22:15:30.412905 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:15:30.419500 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '3d41253a-f30b-4733-9bf2-495793b0d801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781f7c997550>]}
+[0m22:15:30.518572 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_weather/target/manifest.json
+[0m22:15:30.520530 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_weather/target/semantic_manifest.json
+[0m22:15:30.529206 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt_weather/target/osi_document.json
+[0m22:15:30.630129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '3d41253a-f30b-4733-9bf2-495793b0d801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781f77cb7a70>]}
+[0m22:15:30.630572 [info ] [MainThread]: Found 2 models, 5 data tests, 1 source, 561 macros
+[0m22:15:30.630848 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3d41253a-f30b-4733-9bf2-495793b0d801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781f7c260c90>]}
+[0m22:15:30.632503 [info ] [MainThread]: 
+[0m22:15:30.632827 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m22:15:30.633028 [info ] [MainThread]: 
+[0m22:15:30.633414 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m22:15:30.636221 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_weather-data-ingestion-506305_weather_data'
+[0m22:15:30.636546 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:15:31.029863 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '3d41253a-f30b-4733-9bf2-495793b0d801', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781f7c8c5980>]}
+[0m22:15:31.030308 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:15:31.061131 [debug] [Thread-5 (]: Began running node test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b
+[0m22:15:31.061549 [debug] [Thread-2 (]: Began running node test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111
+[0m22:15:31.062377 [debug] [Thread-3 (]: Began running node test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142
+[0m22:15:31.062660 [debug] [Thread-4 (]: Began running node test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966
+[0m22:15:31.062987 [info ] [Thread-5 (]: 4 of 5 START test not_null_stg_hourly_history_observation_timestamp ............ [RUN]
+[0m22:15:31.063360 [info ] [Thread-2 (]: 1 of 5 START test not_null_stg_hourly_history_airflow_dag_id ................... [RUN]
+[0m22:15:31.064077 [info ] [Thread-3 (]: 2 of 5 START test not_null_stg_hourly_history_airflow_run_id ................... [RUN]
+[0m22:15:31.065582 [debug] [Thread-3 (]: Acquiring new bigquery connection 'test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142'
+[0m22:15:31.064876 [debug] [Thread-5 (]: Acquiring new bigquery connection 'test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b'
+[0m22:15:31.065208 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_weather-data-ingestion-506305_weather_data, now test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111)
+[0m22:15:31.065845 [debug] [Thread-3 (]: Began compiling node test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142
+[0m22:15:31.064381 [info ] [Thread-4 (]: 3 of 5 START test not_null_stg_hourly_history_ingested_at_timestamp ............ [RUN]
+[0m22:15:31.066088 [debug] [Thread-5 (]: Began compiling node test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b
+[0m22:15:31.066356 [debug] [Thread-2 (]: Began compiling node test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111
+[0m22:15:31.081125 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966'
+[0m22:15:31.084716 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142"
+[0m22:15:31.089743 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b"
+[0m22:15:31.094352 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111"
+[0m22:15:31.094833 [debug] [Thread-4 (]: Began compiling node test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966
+[0m22:15:31.095616 [debug] [Thread-3 (]: Began executing node test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142
+[0m22:15:31.100901 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966"
+[0m22:15:31.101398 [debug] [Thread-5 (]: Began executing node test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b
+[0m22:15:31.106883 [debug] [Thread-2 (]: Began executing node test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111
+[0m22:15:31.116977 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142"
+[0m22:15:31.118390 [debug] [Thread-5 (]: Writing runtime sql for node "test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b"
+[0m22:15:31.119817 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111"
+[0m22:15:31.120128 [debug] [Thread-4 (]: Began executing node test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966
+[0m22:15:31.120866 [debug] [Thread-5 (]: On test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "weather_profile", "target_name": "dev", "node_id": "test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select observation_timestamp
+from `weather-data-ingestion-506305`.`weather_data`.`stg_hourly_history`
+where observation_timestamp is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:15:31.122340 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966"
+[0m22:15:31.122642 [debug] [Thread-3 (]: On test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "weather_profile", "target_name": "dev", "node_id": "test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select airflow_run_id
+from `weather-data-ingestion-506305`.`weather_data`.`stg_hourly_history`
+where airflow_run_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:15:31.123045 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m22:15:31.123489 [debug] [Thread-2 (]: On test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "weather_profile", "target_name": "dev", "node_id": "test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select airflow_dag_id
+from `weather-data-ingestion-506305`.`weather_data`.`stg_hourly_history`
+where airflow_dag_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:15:31.123869 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m22:15:31.124220 [debug] [Thread-4 (]: On test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "weather_profile", "target_name": "dev", "node_id": "test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select ingested_at_timestamp
+from `weather-data-ingestion-506305`.`weather_data`.`stg_hourly_history`
+where ingested_at_timestamp is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:15:31.152558 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m22:15:31.183342 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m22:15:32.094314 [debug] [Thread-4 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=weather-data-ingestion-506305&j=bq:us-west1:a267493b-1fc5-4b17-881c-2d74933d3ae6&page=queryresults
+[0m22:15:32.101494 [debug] [Thread-5 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=weather-data-ingestion-506305&j=bq:us-west1:b545597d-4532-4e86-9012-0f724b3d503f&page=queryresults
+[0m22:15:32.129365 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=weather-data-ingestion-506305&j=bq:us-west1:ce743326-43fa-4cee-97b7-8b7a49073e3a&page=queryresults
+[0m22:15:32.194891 [debug] [Thread-5 (]: SQL status: OK in 0.093 seconds
+[0m22:15:32.200264 [debug] [Thread-4 (]: SQL status: OK in 0.106 seconds
+[0m22:15:32.223870 [debug] [Thread-3 (]: SQL status: OK in 0.094 seconds
+[0m22:15:32.274107 [debug] [Thread-2 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=weather-data-ingestion-506305&j=bq:us-west1:45cd0785-ce87-45bc-8a6d-21286ea6ae29&page=queryresults
+[0m22:15:32.337885 [debug] [Thread-2 (]: SQL status: OK in 0.063 seconds
+[0m22:15:32.393699 [info ] [Thread-3 (]: 2 of 5 PASS not_null_stg_hourly_history_airflow_run_id ......................... [[32mPASS[0m in 1.33s]
+[0m22:15:32.394302 [debug] [Thread-3 (]: Finished running node test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142
+[0m22:15:32.394606 [debug] [Thread-3 (]: Began running node test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6
+[0m22:15:32.394935 [info ] [Thread-3 (]: 5 of 5 START test unique_stg_hourly_history_observation_timestamp .............. [RUN]
+[0m22:15:32.395288 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142, now test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6)
+[0m22:15:32.395542 [debug] [Thread-3 (]: Began compiling node test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6
+[0m22:15:32.401740 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6"
+[0m22:15:32.402189 [debug] [Thread-3 (]: Began executing node test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6
+[0m22:15:32.403644 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6"
+[0m22:15:32.404155 [debug] [Thread-3 (]: On test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "weather_profile", "target_name": "dev", "node_id": "test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with dbt_test__target as (
+
+  select observation_timestamp as unique_field
+  from `weather-data-ingestion-506305`.`weather_data`.`stg_hourly_history`
+  where observation_timestamp is not null
+
+)
+
+select
+    unique_field,
+    count(*) as n_records
+
+from dbt_test__target
+group by unique_field
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m22:15:32.404546 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m22:15:32.439292 [info ] [Thread-5 (]: 4 of 5 PASS not_null_stg_hourly_history_observation_timestamp .................. [[32mPASS[0m in 1.37s]
+[0m22:15:32.439886 [debug] [Thread-5 (]: Finished running node test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b
+[0m22:15:32.459990 [info ] [Thread-4 (]: 3 of 5 PASS not_null_stg_hourly_history_ingested_at_timestamp .................. [[32mPASS[0m in 1.38s]
+[0m22:15:32.460539 [debug] [Thread-4 (]: Finished running node test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966
+[0m22:15:32.498557 [info ] [Thread-2 (]: 1 of 5 PASS not_null_stg_hourly_history_airflow_dag_id ......................... [[32mPASS[0m in 1.43s]
+[0m22:15:32.499032 [debug] [Thread-2 (]: Finished running node test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111
+[0m22:15:33.041349 [debug] [Thread-3 (]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=weather-data-ingestion-506305&j=bq:us-west1:caa6ece8-3cbe-4e85-be1f-32e5556511b0&page=queryresults
+[0m22:15:33.125121 [debug] [Thread-3 (]: SQL status: OK in 0.083 seconds
+[0m22:15:33.277827 [info ] [Thread-3 (]: 5 of 5 PASS unique_stg_hourly_history_observation_timestamp .................... [[32mPASS[0m in 0.88s]
+[0m22:15:33.278342 [debug] [Thread-3 (]: Finished running node test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6
+[0m22:15:33.280510 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:15:33.312075 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:15:33.312386 [debug] [MainThread]: Connection 'test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111' was properly closed.
+[0m22:15:33.312572 [debug] [MainThread]: Connection 'test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b' was properly closed.
+[0m22:15:33.312741 [debug] [MainThread]: Connection 'test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6' was properly closed.
+[0m22:15:33.312922 [debug] [MainThread]: Connection 'test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966' was properly closed.
+[0m22:15:33.313138 [info ] [MainThread]: 
+[0m22:15:33.313370 [info ] [MainThread]: Finished running 5 data tests in 0 hours 0 minutes and 2.68 seconds (2.68s).
+[0m22:15:33.314255 [debug] [MainThread]: Command end result
+[0m22:15:33.340280 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_weather/target/manifest.json
+[0m22:15:33.342405 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_weather/target/semantic_manifest.json
+[0m22:15:33.344235 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt_weather/target/osi_document.json
+[0m22:15:33.350179 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt_weather/target/run_results.json
+[0m22:15:33.350509 [info ] [MainThread]: 
+[0m22:15:33.350766 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:15:33.351027 [info ] [MainThread]: 
+[0m22:15:33.351253 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=5
+[0m22:15:33.351666 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 3.7942624, "process_in_blocks": "864", "process_kernel_time": 0.322787, "process_mem_max_rss": "285616", "process_out_blocks": "4008", "process_user_time": 2.95132}
+[0m22:15:33.352148 [debug] [MainThread]: Command `dbt test` succeeded at 22:15:33.352070 after 3.79 seconds
+[0m22:15:33.352397 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781f996234d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781f77ca4cb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x781f7c62c1b0>]}
+[0m22:15:33.352640 [debug] [MainThread]: Flushing usage events
+[0m22:15:33.832319 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:55:38.585551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a9210ee270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a923e751d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a91fd7bb10>]}
+
+
+============================== 17:55:38.588959 | 10ddb086-3c10-4c03-82e9-994c8960c10f ==============================
+[0m17:55:38.588959 [info ] [MainThread]: Running with dbt=1.12.3
+[0m17:55:38.589356 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'maximum_seed_size_mib': '1', 'version_check': 'True', 'profiles_dir': '/opt/airflow/dbt_weather', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'partial_parse': 'True', 'write_json': 'True', 'introspect': 'True', 'warn_error': 'None', 'invocation_command': 'dbt docs generate --project-dir /opt/airflow/dbt_weather --profiles-dir /opt/airflow/dbt_weather', 'no_print': 'None', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'debug': 'False', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'log_path': '/opt/airflow/dbt_weather/logs', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'hints_enabled': 'True', 'quiet': 'False', 'use_colors': 'True'}
+[0m17:55:39.395647 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '10ddb086-3c10-4c03-82e9-994c8960c10f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a920e3dcd0>]}
+[0m17:55:39.440243 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '10ddb086-3c10-4c03-82e9-994c8960c10f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a922512ad0>]}
+[0m17:55:39.440785 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m17:55:39.546641 [debug] [MainThread]: checksum: 65be7ef5e3cee717425a3451a46e8fb8f684c3baf1ea504b6451088e704b862e, vars: {}, profile: weather_profile, target: dev, version: 1.12.3
+[0m17:55:39.649245 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m17:55:39.649673 [debug] [MainThread]: Partial parsing: updated file: dbt_weather://models/marts/fct_weather.sql
+[0m17:55:39.854210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '10ddb086-3c10-4c03-82e9-994c8960c10f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a8ff2dd850>]}
+[0m17:55:39.879360 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '10ddb086-3c10-4c03-82e9-994c8960c10f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a8ff15d6d0>]}
+[0m17:55:39.879698 [info ] [MainThread]: Found 2 models, 5 data tests, 1 source, 561 macros
+[0m17:55:39.879939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '10ddb086-3c10-4c03-82e9-994c8960c10f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a8ff244bb0>]}
+[0m17:55:39.881283 [info ] [MainThread]: 
+[0m17:55:39.881572 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m17:55:39.881762 [info ] [MainThread]: 
+[0m17:55:39.882117 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m17:55:39.884734 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_weather-data-ingestion-506305_weather_data'
+[0m17:55:39.885074 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:55:40.337269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '10ddb086-3c10-4c03-82e9-994c8960c10f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a91fc347a0>]}
+[0m17:55:40.337699 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:55:40.367828 [debug] [Thread-2 (]: Began running node model.dbt_weather.stg_hourly_history
+[0m17:55:40.368145 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_weather-data-ingestion-506305_weather_data, now model.dbt_weather.stg_hourly_history)
+[0m17:55:40.368379 [debug] [Thread-2 (]: Began compiling node model.dbt_weather.stg_hourly_history
+[0m17:55:40.372190 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_weather.stg_hourly_history"
+[0m17:55:40.372601 [debug] [Thread-2 (]: Began executing node model.dbt_weather.stg_hourly_history
+[0m17:55:40.372900 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:55:40.400916 [debug] [Thread-2 (]: Finished running node model.dbt_weather.stg_hourly_history
+[0m17:55:40.401758 [debug] [Thread-4 (]: Began running node test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111
+[0m17:55:40.402209 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111'
+[0m17:55:40.402491 [debug] [Thread-4 (]: Began compiling node test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111
+[0m17:55:40.402758 [debug] [Thread-2 (]: Began running node test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966
+[0m17:55:40.403095 [debug] [Thread-3 (]: Began running node model.dbt_weather.fct_weather
+[0m17:55:40.403476 [debug] [Thread-5 (]: Began running node test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142
+[0m17:55:40.413298 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111"
+[0m17:55:40.413676 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_weather.stg_hourly_history, now test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966)
+[0m17:55:40.414187 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.dbt_weather.fct_weather'
+[0m17:55:40.414662 [debug] [Thread-5 (]: Acquiring new bigquery connection 'test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142'
+[0m17:55:40.415088 [debug] [Thread-2 (]: Began compiling node test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966
+[0m17:55:40.415419 [debug] [Thread-3 (]: Began compiling node model.dbt_weather.fct_weather
+[0m17:55:40.415764 [debug] [Thread-4 (]: Began executing node test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111
+[0m17:55:40.416060 [debug] [Thread-5 (]: Began compiling node test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142
+[0m17:55:40.420172 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966"
+[0m17:55:40.421545 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_weather.fct_weather"
+[0m17:55:40.421894 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m17:55:40.426821 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142"
+[0m17:55:40.427600 [debug] [Thread-3 (]: Began executing node model.dbt_weather.fct_weather
+[0m17:55:40.455052 [debug] [Thread-2 (]: Began executing node test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966
+[0m17:55:40.455411 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m17:55:40.455739 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m17:55:40.456496 [debug] [Thread-4 (]: Finished running node test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111
+[0m17:55:40.456815 [debug] [Thread-5 (]: Began executing node test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142
+[0m17:55:40.457235 [debug] [Thread-4 (]: Began running node test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b
+[0m17:55:40.485034 [debug] [Thread-3 (]: Finished running node model.dbt_weather.fct_weather
+[0m17:55:40.485381 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m17:55:40.513479 [debug] [Thread-2 (]: Finished running node test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966
+[0m17:55:40.513828 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111, now test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b)
+[0m17:55:40.514189 [debug] [Thread-3 (]: Began running node test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6
+[0m17:55:40.542103 [debug] [Thread-4 (]: Began compiling node test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b
+[0m17:55:40.542700 [debug] [Thread-5 (]: Finished running node test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142
+[0m17:55:40.543085 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.dbt_weather.fct_weather, now test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6)
+[0m17:55:40.547566 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b"
+[0m17:55:40.548032 [debug] [Thread-3 (]: Began compiling node test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6
+[0m17:55:40.553964 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6"
+[0m17:55:40.554359 [debug] [Thread-4 (]: Began executing node test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b
+[0m17:55:40.554665 [debug] [Thread-3 (]: Began executing node test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6
+[0m17:55:40.554959 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m17:55:40.555202 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m17:55:40.610555 [debug] [Thread-4 (]: Finished running node test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b
+[0m17:55:40.611213 [debug] [Thread-3 (]: Finished running node test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6
+[0m17:55:40.612443 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:55:40.612662 [debug] [MainThread]: Connection 'test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966' was properly closed.
+[0m17:55:40.612866 [debug] [MainThread]: Connection 'test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b' was properly closed.
+[0m17:55:40.613030 [debug] [MainThread]: Connection 'test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6' was properly closed.
+[0m17:55:40.613181 [debug] [MainThread]: Connection 'test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142' was properly closed.
+[0m17:55:40.613943 [debug] [MainThread]: Command end result
+[0m17:55:40.680811 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_weather/target/manifest.json
+[0m17:55:40.685734 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_weather/target/semantic_manifest.json
+[0m17:55:40.699156 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt_weather/target/osi_document.json
+[0m17:55:40.704839 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt_weather/target/run_results.json
+[0m17:55:40.709703 [debug] [MainThread]: Acquiring new bigquery connection 'generate_catalog'
+[0m17:55:40.709984 [info ] [MainThread]: Building catalog
+[0m17:55:40.713196 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:55:40.985028 [debug] [ThreadPool]: Acquiring new bigquery connection 'weather-data-ingestion-506305.information_schema'
+[0m17:55:40.998501 [debug] [ThreadPool]: On weather-data-ingestion-506305.information_schema: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "weather_profile", "target_name": "dev", "connection_name": "weather-data-ingestion-506305.information_schema"} */
+
+    with
+                table_shards_stage as (
+    select
+        tables.project_id as table_catalog,
+        tables.dataset_id as table_schema,
+        coalesce(REGEXP_EXTRACT(tables.table_id, '^(.+)[0-9]{8}$'), tables.table_id) as table_name,
+        tables.table_id as shard_name,
+        REGEXP_EXTRACT(tables.table_id, '^.+([0-9]{8})$') as shard_index,
+        REGEXP_CONTAINS(tables.table_id, '^.+[0-9]{8}$') and tables.type = 1 as is_date_shard,
+        case
+            when materialized_views.table_name is not null then 'materialized view'
+            when tables.type = 1 then 'table'
+            when tables.type = 2 then 'view'
+            else 'external'
+        end as table_type,
+        tables.type = 1 as is_table,
+        JSON_VALUE(table_description.option_value) as table_comment,
+        tables.size_bytes,
+        tables.row_count
+    from `weather-data-ingestion-506305`.`weather_data`.__TABLES__ tables
+    left join `weather-data-ingestion-506305`.`weather_data`.INFORMATION_SCHEMA.MATERIALIZED_VIEWS materialized_views
+        on materialized_views.table_catalog = tables.project_id
+        and materialized_views.table_schema = tables.dataset_id
+        and materialized_views.table_name = tables.table_id
+    left join `weather-data-ingestion-506305`.`weather_data`.INFORMATION_SCHEMA.TABLE_OPTIONS table_description
+        on table_description.table_catalog = tables.project_id
+        and table_description.table_schema = tables.dataset_id
+        and table_description.table_name = tables.table_id
+        and table_description.option_name = 'description'
+),
+                table_shards as (
+                    select * from table_shards_stage
+                    where ((
+                                upper(table_schema) = upper('weather_data')
+                            and upper(table_name) = upper('fct_weather')
+                            ) or (
+                                upper(table_schema) = upper('weather_data')
+                            and upper(table_name) = upper('raw_hourly_history')
+                            ) or (
+                                upper(table_schema) = upper('weather_data')
+                            and upper(table_name) = upper('stg_hourly_history')
+                            ))
+                ),
+                tables as (
+    select distinct
+        table_catalog,
+        table_schema,
+        table_name,
+        is_date_shard,
+        table_type,
+        is_table,
+        table_comment
+    from table_shards
+),
+                table_stats as (
+    select
+        table_catalog,
+        table_schema,
+        table_name,
+        max(shard_name) as latest_shard_name,
+        min(shard_index) as shard_min,
+        max(shard_index) as shard_max,
+        count(shard_index) as shard_count,
+        sum(size_bytes) as size_bytes,
+        sum(row_count) as row_count
+    from table_shards
+    group by 1, 2, 3
+),
+
+                columns as (
+    select
+        columns.table_catalog,
+        columns.table_schema,
+        columns.table_name as shard_name,
+        coalesce(paths.field_path, '<unknown>') as column_name,
+        -- invent a row number to account for nested fields
+        -- BQ does not treat these nested properties as independent fields
+        row_number() over (
+            partition by
+                columns.table_catalog,
+                columns.table_schema,
+                columns.table_name
+            order by
+                columns.ordinal_position,
+                paths.field_path
+        ) as column_index,
+        coalesce(paths.data_type, '<unknown>') as column_type,
+        paths.description as column_comment,
+        case when columns.is_partitioning_column = 'YES' then 1 else 0 end as is_partitioning_column,
+        case when columns.is_partitioning_column = 'YES' then paths.field_path end as partition_column,
+        case when columns.clustering_ordinal_position is not null then 1 else 0 end as is_clustering_column,
+        case when columns.clustering_ordinal_position is not null then paths.field_path end as cluster_column,
+        columns.clustering_ordinal_position
+    from `weather-data-ingestion-506305`.`weather_data`.INFORMATION_SCHEMA.COLUMNS columns
+    join `weather-data-ingestion-506305`.`weather_data`.INFORMATION_SCHEMA.COLUMN_FIELD_PATHS paths
+        on paths.table_catalog = columns.table_catalog
+        and paths.table_schema = columns.table_schema
+        and paths.table_name = columns.table_name
+        and paths.column_name = columns.column_name
+    where columns.ordinal_position is not null
+),
+                column_stats as (
+    select
+        table_catalog,
+        table_schema,
+        shard_name,
+        max(is_partitioning_column) = 1 as is_partitioned,
+        max(partition_column) as partition_column,
+        max(is_clustering_column) = 1 as is_clustered,
+        array_to_string(
+            array_agg(
+                cluster_column ignore nulls
+                order by clustering_ordinal_position
+            ), ', '
+        ) as clustering_columns
+    from columns
+    group by 1, 2, 3
+)
+
+            
+    select
+        tables.table_catalog as table_database,
+        tables.table_schema,
+        case
+            when tables.is_date_shard then concat(tables.table_name, '*')
+            else tables.table_name
+        end as table_name,
+        tables.table_type,
+        tables.table_comment,
+        -- coalesce column metadata fields to ensure they are non-null for catalog generation
+        -- external table columns are not present in COLUMN_FIELD_PATHS
+        coalesce(columns.column_name, '<unknown>') as column_name,
+        coalesce(columns.column_index, 1) as column_index,
+        coalesce(columns.column_type, '<unknown>') as column_type,
+        coalesce(columns.column_comment, '') as column_comment,
+
+        'Shard count' as `stats__date_shards__label`,
+        table_stats.shard_count as `stats__date_shards__value`,
+        'The number of date shards in this table' as `stats__date_shards__description`,
+        tables.is_date_shard as `stats__date_shards__include`,
+
+        'Shard (min)' as `stats__date_shard_min__label`,
+        table_stats.shard_min as `stats__date_shard_min__value`,
+        'The first date shard in this table' as `stats__date_shard_min__description`,
+        tables.is_date_shard as `stats__date_shard_min__include`,
+
+        'Shard (max)' as `stats__date_shard_max__label`,
+        table_stats.shard_max as `stats__date_shard_max__value`,
+        'The last date shard in this table' as `stats__date_shard_max__description`,
+        tables.is_date_shard as `stats__date_shard_max__include`,
+
+        '# Rows' as `stats__num_rows__label`,
+        table_stats.row_count as `stats__num_rows__value`,
+        'Approximate count of rows in this table' as `stats__num_rows__description`,
+        tables.is_table as `stats__num_rows__include`,
+
+        'Approximate Size' as `stats__num_bytes__label`,
+        table_stats.size_bytes as `stats__num_bytes__value`,
+        'Approximate size of table as reported by BigQuery' as `stats__num_bytes__description`,
+        tables.is_table as `stats__num_bytes__include`,
+
+        'Partitioned By' as `stats__partitioning_type__label`,
+        column_stats.partition_column as `stats__partitioning_type__value`,
+        'The partitioning column for this table' as `stats__partitioning_type__description`,
+        column_stats.is_partitioned as `stats__partitioning_type__include`,
+
+        'Clustered By' as `stats__clustering_fields__label`,
+        column_stats.clustering_columns as `stats__clustering_fields__value`,
+        'The clustering columns for this table' as `stats__clustering_fields__description`,
+        column_stats.is_clustered as `stats__clustering_fields__include`
+
+    from tables
+    join table_stats
+        on table_stats.table_catalog = tables.table_catalog
+        and table_stats.table_schema = tables.table_schema
+        and table_stats.table_name = tables.table_name
+    left join column_stats
+        on column_stats.table_catalog = tables.table_catalog
+        and column_stats.table_schema = tables.table_schema
+        and column_stats.shard_name = table_stats.latest_shard_name
+    left join columns
+        on columns.table_catalog = tables.table_catalog
+        and columns.table_schema = tables.table_schema
+        and columns.shard_name = table_stats.latest_shard_name
+
+  
+[0m17:55:40.999184 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:55:41.639432 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=weather-data-ingestion-506305&j=bq:us-west1:a0ecaeac-049d-4a54-b867-659718eb9ced&page=queryresults
+[0m17:55:42.505828 [debug] [ThreadPool]: SQL status: OK in 0.866 seconds
+[0m17:55:42.808425 [debug] [MainThread]: Wrote artifact CatalogArtifact to /opt/airflow/dbt_weather/target/catalog.json
+[0m17:55:42.830751 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_weather/target/manifest.json
+[0m17:55:42.832581 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_weather/target/semantic_manifest.json
+[0m17:55:42.834201 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt_weather/target/osi_document.json
+[0m17:55:42.834426 [info ] [MainThread]: Catalog written to /opt/airflow/dbt_weather/target/catalog.json
+[0m17:55:42.834948 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 4.302971, "process_in_blocks": "210400", "process_kernel_time": 0.342423, "process_mem_max_rss": "252408", "process_out_blocks": "7768", "process_user_time": 2.863501}
+[0m17:55:42.835516 [debug] [MainThread]: Command `dbt docs generate` succeeded at 17:55:42.835434 after 4.30 seconds
+[0m17:55:42.835765 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m17:55:42.836009 [debug] [MainThread]: Connection 'weather-data-ingestion-506305.information_schema' was properly closed.
+[0m17:55:42.836262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a92002f4d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a8fe497c20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75a8fe497490>]}
+[0m17:55:42.836538 [debug] [MainThread]: Flushing usage events
+[0m17:55:43.162552 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:55:44.573693 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea4849fa270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea4835dfed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea4835dfb10>]}
+
+
+============================== 17:55:44.575897 | 6aad7b1a-e505-41d1-874b-f43c2b574bff ==============================
+[0m17:55:44.575897 [info ] [MainThread]: Running with dbt=1.12.3
+[0m17:55:44.576250 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'quiet': 'False', 'write_json': 'True', 'printer_width': '80', 'warn_error': 'None', 'log_cache_events': 'False', 'debug': 'False', 'log_format': 'default', 'fail_fast': 'False', 'introspect': 'True', 'log_path': '/opt/airflow/dbt_weather/logs', 'profiles_dir': '/opt/airflow/dbt_weather', 'maximum_seed_size_mib': '1', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'version_check': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt docs serve --project-dir /opt/airflow/dbt_weather --profiles-dir /opt/airflow/dbt_weather --port 8081', 'no_print': 'None', 'use_colors': 'True', 'partial_parse': 'True', 'target_path': 'None', 'hints_enabled': 'True', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True'}
+[0m17:55:45.102055 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6aad7b1a-e505-41d1-874b-f43c2b574bff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea48473dcd0>]}
+[0m17:55:45.145959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6aad7b1a-e505-41d1-874b-f43c2b574bff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea485e06ad0>]}
+[0m18:06:19.189219 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m18:06:19.192201 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/airflow/dbt_venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "/home/airflow/dbt_venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/dbt_venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 295, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/dbt_venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 340, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/dbt_venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 387, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/dbt_venv/lib/python3.13/site-packages/dbt/cli/main.py", line 323, in docs_serve
+    results = task.run()
+  File "/home/airflow/dbt_venv/lib/python3.13/site-packages/dbt/task/docs/serve.py", line 29, in run
+    httpd.serve_forever()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/python/lib/python3.13/socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/usr/python/lib/python3.13/selectors.py", line 398, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+
+[0m18:06:19.192697 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_success": false, "command_wall_clock_time": 634.6734, "process_in_blocks": "1032", "process_kernel_time": 0.183086, "process_mem_max_rss": "228496", "process_out_blocks": "3576", "process_user_time": 1.800702}
+[0m18:06:19.193357 [debug] [MainThread]: Command `dbt docs serve` failed at 18:06:19.193282 after 634.67 seconds
+[0m18:06:19.193601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea4630dbb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea4630dba50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ea463113a70>]}
+[0m18:06:19.193859 [debug] [MainThread]: Flushing usage events
+[0m18:06:19.814433 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:08:30.660505 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d838d96270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d83b9a11d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d8377d3b10>]}
+
+
+============================== 18:08:30.662848 | 13b022fa-7fe4-49e3-bb40-4d0573082f3a ==============================
+[0m18:08:30.662848 [info ] [MainThread]: Running with dbt=1.12.3
+[0m18:08:30.663261 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt docs generate --project-dir /opt/airflow/dbt_weather --profiles-dir /opt/airflow/dbt_weather', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/opt/airflow/dbt_weather/logs', 'log_format': 'default', 'printer_width': '80', 'target_path': 'None', 'use_experimental_parser': 'False', 'write_json': 'True', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'fail_fast': 'False', 'indirect_selection': 'eager', 'debug': 'False', 'static_parser': 'True', 'use_colors': 'True', 'quiet': 'False', 'log_cache_events': 'False', 'profiles_dir': '/opt/airflow/dbt_weather', 'partial_parse': 'True', 'hints_enabled': 'True', 'introspect': 'True', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True'}
+[0m18:08:31.194950 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '13b022fa-7fe4-49e3-bb40-4d0573082f3a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d8388ddcd0>]}
+[0m18:08:31.239501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '13b022fa-7fe4-49e3-bb40-4d0573082f3a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d83a01ead0>]}
+[0m18:08:31.240064 [info ] [MainThread]: Registered adapter: bigquery=1.12.0
+[0m18:08:31.343036 [debug] [MainThread]: checksum: 65be7ef5e3cee717425a3451a46e8fb8f684c3baf1ea504b6451088e704b862e, vars: {}, profile: weather_profile, target: dev, version: 1.12.3
+[0m18:08:31.448630 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:08:31.448944 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m18:08:31.449140 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:08:31.455384 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '13b022fa-7fe4-49e3-bb40-4d0573082f3a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d816e5f550>]}
+[0m18:08:31.486618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '13b022fa-7fe4-49e3-bb40-4d0573082f3a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d816ce1d60>]}
+[0m18:08:31.487007 [info ] [MainThread]: Found 2 models, 5 data tests, 1 source, 561 macros
+[0m18:08:31.487243 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '13b022fa-7fe4-49e3-bb40-4d0573082f3a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d816c267b0>]}
+[0m18:08:31.488652 [info ] [MainThread]: 
+[0m18:08:31.488952 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m18:08:31.489159 [info ] [MainThread]: 
+[0m18:08:31.489512 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m18:08:31.492183 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_weather-data-ingestion-506305_weather_data'
+[0m18:08:31.492523 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:08:32.052736 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '13b022fa-7fe4-49e3-bb40-4d0573082f3a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d816dbfe10>]}
+[0m18:08:32.053134 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:08:32.083187 [debug] [Thread-2 (]: Began running node model.dbt_weather.stg_hourly_history
+[0m18:08:32.083491 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_weather-data-ingestion-506305_weather_data, now model.dbt_weather.stg_hourly_history)
+[0m18:08:32.083718 [debug] [Thread-2 (]: Began compiling node model.dbt_weather.stg_hourly_history
+[0m18:08:32.089012 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_weather.stg_hourly_history"
+[0m18:08:32.089425 [debug] [Thread-2 (]: Began executing node model.dbt_weather.stg_hourly_history
+[0m18:08:32.089721 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m18:08:32.117357 [debug] [Thread-2 (]: Finished running node model.dbt_weather.stg_hourly_history
+[0m18:08:32.118179 [debug] [Thread-2 (]: Began running node test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966
+[0m18:08:32.118587 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.dbt_weather.stg_hourly_history, now test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966)
+[0m18:08:32.118994 [debug] [Thread-4 (]: Began running node test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111
+[0m18:08:32.119363 [debug] [Thread-5 (]: Began running node test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142
+[0m18:08:32.119704 [debug] [Thread-2 (]: Began compiling node test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966
+[0m18:08:32.120052 [debug] [Thread-3 (]: Began running node model.dbt_weather.fct_weather
+[0m18:08:32.120482 [debug] [Thread-4 (]: Acquiring new bigquery connection 'test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111'
+[0m18:08:32.120907 [debug] [Thread-5 (]: Acquiring new bigquery connection 'test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142'
+[0m18:08:32.130620 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966"
+[0m18:08:32.131077 [debug] [Thread-3 (]: Acquiring new bigquery connection 'model.dbt_weather.fct_weather'
+[0m18:08:32.131446 [debug] [Thread-4 (]: Began compiling node test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111
+[0m18:08:32.131831 [debug] [Thread-5 (]: Began compiling node test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142
+[0m18:08:32.132236 [debug] [Thread-3 (]: Began compiling node model.dbt_weather.fct_weather
+[0m18:08:32.136748 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111"
+[0m18:08:32.137191 [debug] [Thread-2 (]: Began executing node test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966
+[0m18:08:32.141575 [debug] [Thread-5 (]: Writing injected SQL for node "test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142"
+[0m18:08:32.143004 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_weather.fct_weather"
+[0m18:08:32.143461 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m18:08:32.143929 [debug] [Thread-4 (]: Began executing node test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111
+[0m18:08:32.171925 [debug] [Thread-2 (]: Finished running node test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966
+[0m18:08:32.172375 [debug] [Thread-3 (]: Began executing node model.dbt_weather.fct_weather
+[0m18:08:32.172757 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m18:08:32.173130 [debug] [Thread-5 (]: Began executing node test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142
+[0m18:08:32.173482 [debug] [Thread-2 (]: Began running node test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b
+[0m18:08:32.173809 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m18:08:32.201289 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m18:08:32.201936 [debug] [Thread-4 (]: Finished running node test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111
+[0m18:08:32.202232 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_weather.not_null_stg_hourly_history_ingested_at_timestamp.e93bdf5966, now test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b)
+[0m18:08:32.230943 [debug] [Thread-5 (]: Finished running node test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142
+[0m18:08:32.258490 [debug] [Thread-4 (]: Began running node test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6
+[0m18:08:32.259137 [debug] [Thread-3 (]: Finished running node model.dbt_weather.fct_weather
+[0m18:08:32.259449 [debug] [Thread-2 (]: Began compiling node test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b
+[0m18:08:32.260030 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_weather.not_null_stg_hourly_history_airflow_dag_id.b48a8e3111, now test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6)
+[0m18:08:32.265110 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b"
+[0m18:08:32.265476 [debug] [Thread-4 (]: Began compiling node test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6
+[0m18:08:32.271048 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6"
+[0m18:08:32.271429 [debug] [Thread-2 (]: Began executing node test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b
+[0m18:08:32.271758 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m18:08:32.272151 [debug] [Thread-4 (]: Began executing node test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6
+[0m18:08:32.272426 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m18:08:32.327244 [debug] [Thread-4 (]: Finished running node test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6
+[0m18:08:32.327817 [debug] [Thread-2 (]: Finished running node test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b
+[0m18:08:32.329086 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:08:32.329289 [debug] [MainThread]: Connection 'test.dbt_weather.not_null_stg_hourly_history_observation_timestamp.61be5d445b' was properly closed.
+[0m18:08:32.329459 [debug] [MainThread]: Connection 'test.dbt_weather.unique_stg_hourly_history_observation_timestamp.3b4c4793a6' was properly closed.
+[0m18:08:32.329613 [debug] [MainThread]: Connection 'test.dbt_weather.not_null_stg_hourly_history_airflow_run_id.904ff6f142' was properly closed.
+[0m18:08:32.329774 [debug] [MainThread]: Connection 'model.dbt_weather.fct_weather' was properly closed.
+[0m18:08:32.330526 [debug] [MainThread]: Command end result
+[0m18:08:32.401119 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_weather/target/manifest.json
+[0m18:08:32.403166 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_weather/target/semantic_manifest.json
+[0m18:08:32.412857 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt_weather/target/osi_document.json
+[0m18:08:32.418183 [debug] [MainThread]: Wrote artifact RunExecutionResult to /opt/airflow/dbt_weather/target/run_results.json
+[0m18:08:32.419388 [debug] [MainThread]: Acquiring new bigquery connection 'generate_catalog'
+[0m18:08:32.419600 [info ] [MainThread]: Building catalog
+[0m18:08:32.422619 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:08:32.705000 [debug] [ThreadPool]: Acquiring new bigquery connection 'weather-data-ingestion-506305.information_schema'
+[0m18:08:32.717594 [debug] [ThreadPool]: On weather-data-ingestion-506305.information_schema: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "weather_profile", "target_name": "dev", "connection_name": "weather-data-ingestion-506305.information_schema"} */
+
+    with
+                table_shards_stage as (
+    select
+        tables.project_id as table_catalog,
+        tables.dataset_id as table_schema,
+        coalesce(REGEXP_EXTRACT(tables.table_id, '^(.+)[0-9]{8}$'), tables.table_id) as table_name,
+        tables.table_id as shard_name,
+        REGEXP_EXTRACT(tables.table_id, '^.+([0-9]{8})$') as shard_index,
+        REGEXP_CONTAINS(tables.table_id, '^.+[0-9]{8}$') and tables.type = 1 as is_date_shard,
+        case
+            when materialized_views.table_name is not null then 'materialized view'
+            when tables.type = 1 then 'table'
+            when tables.type = 2 then 'view'
+            else 'external'
+        end as table_type,
+        tables.type = 1 as is_table,
+        JSON_VALUE(table_description.option_value) as table_comment,
+        tables.size_bytes,
+        tables.row_count
+    from `weather-data-ingestion-506305`.`weather_data`.__TABLES__ tables
+    left join `weather-data-ingestion-506305`.`weather_data`.INFORMATION_SCHEMA.MATERIALIZED_VIEWS materialized_views
+        on materialized_views.table_catalog = tables.project_id
+        and materialized_views.table_schema = tables.dataset_id
+        and materialized_views.table_name = tables.table_id
+    left join `weather-data-ingestion-506305`.`weather_data`.INFORMATION_SCHEMA.TABLE_OPTIONS table_description
+        on table_description.table_catalog = tables.project_id
+        and table_description.table_schema = tables.dataset_id
+        and table_description.table_name = tables.table_id
+        and table_description.option_name = 'description'
+),
+                table_shards as (
+                    select * from table_shards_stage
+                    where ((
+                                upper(table_schema) = upper('weather_data')
+                            and upper(table_name) = upper('fct_weather')
+                            ) or (
+                                upper(table_schema) = upper('weather_data')
+                            and upper(table_name) = upper('raw_hourly_history')
+                            ) or (
+                                upper(table_schema) = upper('weather_data')
+                            and upper(table_name) = upper('stg_hourly_history')
+                            ))
+                ),
+                tables as (
+    select distinct
+        table_catalog,
+        table_schema,
+        table_name,
+        is_date_shard,
+        table_type,
+        is_table,
+        table_comment
+    from table_shards
+),
+                table_stats as (
+    select
+        table_catalog,
+        table_schema,
+        table_name,
+        max(shard_name) as latest_shard_name,
+        min(shard_index) as shard_min,
+        max(shard_index) as shard_max,
+        count(shard_index) as shard_count,
+        sum(size_bytes) as size_bytes,
+        sum(row_count) as row_count
+    from table_shards
+    group by 1, 2, 3
+),
+
+                columns as (
+    select
+        columns.table_catalog,
+        columns.table_schema,
+        columns.table_name as shard_name,
+        coalesce(paths.field_path, '<unknown>') as column_name,
+        -- invent a row number to account for nested fields
+        -- BQ does not treat these nested properties as independent fields
+        row_number() over (
+            partition by
+                columns.table_catalog,
+                columns.table_schema,
+                columns.table_name
+            order by
+                columns.ordinal_position,
+                paths.field_path
+        ) as column_index,
+        coalesce(paths.data_type, '<unknown>') as column_type,
+        paths.description as column_comment,
+        case when columns.is_partitioning_column = 'YES' then 1 else 0 end as is_partitioning_column,
+        case when columns.is_partitioning_column = 'YES' then paths.field_path end as partition_column,
+        case when columns.clustering_ordinal_position is not null then 1 else 0 end as is_clustering_column,
+        case when columns.clustering_ordinal_position is not null then paths.field_path end as cluster_column,
+        columns.clustering_ordinal_position
+    from `weather-data-ingestion-506305`.`weather_data`.INFORMATION_SCHEMA.COLUMNS columns
+    join `weather-data-ingestion-506305`.`weather_data`.INFORMATION_SCHEMA.COLUMN_FIELD_PATHS paths
+        on paths.table_catalog = columns.table_catalog
+        and paths.table_schema = columns.table_schema
+        and paths.table_name = columns.table_name
+        and paths.column_name = columns.column_name
+    where columns.ordinal_position is not null
+),
+                column_stats as (
+    select
+        table_catalog,
+        table_schema,
+        shard_name,
+        max(is_partitioning_column) = 1 as is_partitioned,
+        max(partition_column) as partition_column,
+        max(is_clustering_column) = 1 as is_clustered,
+        array_to_string(
+            array_agg(
+                cluster_column ignore nulls
+                order by clustering_ordinal_position
+            ), ', '
+        ) as clustering_columns
+    from columns
+    group by 1, 2, 3
+)
+
+            
+    select
+        tables.table_catalog as table_database,
+        tables.table_schema,
+        case
+            when tables.is_date_shard then concat(tables.table_name, '*')
+            else tables.table_name
+        end as table_name,
+        tables.table_type,
+        tables.table_comment,
+        -- coalesce column metadata fields to ensure they are non-null for catalog generation
+        -- external table columns are not present in COLUMN_FIELD_PATHS
+        coalesce(columns.column_name, '<unknown>') as column_name,
+        coalesce(columns.column_index, 1) as column_index,
+        coalesce(columns.column_type, '<unknown>') as column_type,
+        coalesce(columns.column_comment, '') as column_comment,
+
+        'Shard count' as `stats__date_shards__label`,
+        table_stats.shard_count as `stats__date_shards__value`,
+        'The number of date shards in this table' as `stats__date_shards__description`,
+        tables.is_date_shard as `stats__date_shards__include`,
+
+        'Shard (min)' as `stats__date_shard_min__label`,
+        table_stats.shard_min as `stats__date_shard_min__value`,
+        'The first date shard in this table' as `stats__date_shard_min__description`,
+        tables.is_date_shard as `stats__date_shard_min__include`,
+
+        'Shard (max)' as `stats__date_shard_max__label`,
+        table_stats.shard_max as `stats__date_shard_max__value`,
+        'The last date shard in this table' as `stats__date_shard_max__description`,
+        tables.is_date_shard as `stats__date_shard_max__include`,
+
+        '# Rows' as `stats__num_rows__label`,
+        table_stats.row_count as `stats__num_rows__value`,
+        'Approximate count of rows in this table' as `stats__num_rows__description`,
+        tables.is_table as `stats__num_rows__include`,
+
+        'Approximate Size' as `stats__num_bytes__label`,
+        table_stats.size_bytes as `stats__num_bytes__value`,
+        'Approximate size of table as reported by BigQuery' as `stats__num_bytes__description`,
+        tables.is_table as `stats__num_bytes__include`,
+
+        'Partitioned By' as `stats__partitioning_type__label`,
+        column_stats.partition_column as `stats__partitioning_type__value`,
+        'The partitioning column for this table' as `stats__partitioning_type__description`,
+        column_stats.is_partitioned as `stats__partitioning_type__include`,
+
+        'Clustered By' as `stats__clustering_fields__label`,
+        column_stats.clustering_columns as `stats__clustering_fields__value`,
+        'The clustering columns for this table' as `stats__clustering_fields__description`,
+        column_stats.is_clustered as `stats__clustering_fields__include`
+
+    from tables
+    join table_stats
+        on table_stats.table_catalog = tables.table_catalog
+        and table_stats.table_schema = tables.table_schema
+        and table_stats.table_name = tables.table_name
+    left join column_stats
+        on column_stats.table_catalog = tables.table_catalog
+        and column_stats.table_schema = tables.table_schema
+        and column_stats.shard_name = table_stats.latest_shard_name
+    left join columns
+        on columns.table_catalog = tables.table_catalog
+        and columns.table_schema = tables.table_schema
+        and columns.shard_name = table_stats.latest_shard_name
+
+  
+[0m18:08:32.718071 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:08:33.268860 [debug] [ThreadPool]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=weather-data-ingestion-506305&j=bq:us-west1:ba2bb2d8-da4b-4c80-9f2d-54a1175bd4b7&page=queryresults
+[0m18:08:34.128585 [debug] [ThreadPool]: SQL status: OK in 0.859 seconds
+[0m18:08:34.451838 [debug] [MainThread]: Wrote artifact CatalogArtifact to /opt/airflow/dbt_weather/target/catalog.json
+[0m18:08:34.475082 [debug] [MainThread]: Wrote artifact WritableManifest to /opt/airflow/dbt_weather/target/manifest.json
+[0m18:08:34.476956 [debug] [MainThread]: Wrote artifact SemanticManifest to /opt/airflow/dbt_weather/target/semantic_manifest.json
+[0m18:08:34.478591 [debug] [MainThread]: Wrote artifact OsiDocument to /opt/airflow/dbt_weather/target/osi_document.json
+[0m18:08:34.478847 [info ] [MainThread]: Catalog written to /opt/airflow/dbt_weather/target/catalog.json
+[0m18:08:34.479354 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": true, "command_wall_clock_time": 3.8726609, "process_in_blocks": "5440", "process_kernel_time": 0.281637, "process_mem_max_rss": "248992", "process_out_blocks": "6448", "process_user_time": 2.624225}
+[0m18:08:34.479883 [debug] [MainThread]: Command `dbt docs generate` succeeded at 18:08:34.479802 after 3.87 seconds
+[0m18:08:34.480103 [debug] [MainThread]: Connection 'generate_catalog' was properly closed.
+[0m18:08:34.480328 [debug] [MainThread]: Connection 'weather-data-ingestion-506305.information_schema' was properly closed.
+[0m18:08:34.480568 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d837c974d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d816cced00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76d816cce570>]}
+[0m18:08:34.480842 [debug] [MainThread]: Flushing usage events
+[0m18:08:35.109442 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:08:36.536619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e29a307a270>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e29a1cabed0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e29a1cabb10>]}
+
+
+============================== 18:08:36.538879 | a86054f4-2003-4165-9525-a29c1f8b9506 ==============================
+[0m18:08:36.538879 [info ] [MainThread]: Running with dbt=1.12.3
+[0m18:08:36.539239 [debug] [MainThread]: running dbt with arguments {'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'log_path': '/opt/airflow/dbt_weather/logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'maximum_seed_size_mib': '1', 'no_print': 'None', 'use_experimental_parser': 'False', 'debug': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'hints_enabled': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/opt/airflow/dbt_weather', 'warn_error': 'None', 'write_json': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt docs serve --host 0.0.0.0 --port 8081 --project-dir /opt/airflow/dbt_weather --profiles-dir /opt/airflow/dbt_weather', 'log_cache_events': 'False', 'static_parser': 'True', 'empty': 'None', 'log_format': 'default', 'version_check': 'True', 'target_path': 'None', 'quiet': 'False'}
+[0m18:08:37.062729 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a86054f4-2003-4165-9525-a29c1f8b9506', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e29a2dc5cd0>]}
+[0m18:08:37.107127 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a86054f4-2003-4165-9525-a29c1f8b9506', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e29a44a2ad0>]}
+[0m18:11:54.775409 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m18:11:54.777911 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/airflow/dbt_venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "/home/airflow/dbt_venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/dbt_venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 295, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/dbt_venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 340, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/dbt_venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 387, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/dbt_venv/lib/python3.13/site-packages/dbt/cli/main.py", line 323, in docs_serve
+    results = task.run()
+  File "/home/airflow/dbt_venv/lib/python3.13/site-packages/dbt/task/docs/serve.py", line 29, in run
+    httpd.serve_forever()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/python/lib/python3.13/socketserver.py", line 235, in serve_forever
+    ready = selector.select(poll_interval)
+  File "/usr/python/lib/python3.13/selectors.py", line 398, in select
+    fd_event_list = self._selector.poll(timeout)
+KeyboardInterrupt
+
+[0m18:11:54.778562 [debug] [MainThread]: Resource report: {"command_name": "serve", "command_success": false, "command_wall_clock_time": 198.29659, "process_in_blocks": "0", "process_kernel_time": 0.169705, "process_mem_max_rss": "228712", "process_out_blocks": "3568", "process_user_time": 1.722039}
+[0m18:11:54.779462 [debug] [MainThread]: Command `dbt docs serve` failed at 18:11:54.779370 after 198.30 seconds
+[0m18:11:54.779720 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e29817f3c50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e29817f3b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e298182ba70>]}
+[0m18:11:54.780010 [debug] [MainThread]: Flushing usage events
+[0m18:11:55.115113 [debug] [MainThread]: An error was encountered while trying to flush usage events

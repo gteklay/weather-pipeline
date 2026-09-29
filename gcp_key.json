@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "weather-data-ingestion-506305",
+  "private_key_id": "dc9a5993fd42a3a3d5d3552a1fedf3465567fd44",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDSqAX75wHjQaEN\nVARRhrU55BFEeFUBQsZgKytAwnocL3CYiTR6KeGOZyd7d3hPNbm2bWc5wBVy9Trs\nFNKnBTS5NBlqyCXscjZMOR1l09AF8O8xcJXsYBAFFob8H9QRnCQQhdQiCbNu2pK3\nhuASvAmZisTAvRsxD7fVD8mMjTJRShNgCI1DVRjvH58qIKK5IyLx2NoCtRt1G2i/\nuh/cVX6ctdongcckkh5B9u8y2/IeX9EQtx23D8jpvzcZJzF7Kkto1JolNLmeQBGb\njJ2Snjwdjfe5DzFzFJFRuGwoYsYo218/0hIfvi4yf0+4ZTBQ4jB4ctls2l9TbNbT\nN4fn5sAjAgMBAAECggEAKIi5Qgvk0phFx51DiXZst7t5UR4AaVIyfr2/wGHLglHk\njg1Uoi8d3jteHwVRiphRaFdr1fJujiS+1j95ezbmur5aJ7Bkj7c4WHli/T2BGSuP\nswkxZ/7iBkCb77amJU9QpzdBJt2L/8giFBtpUWGKTVek3Vtl+I5INsCnbRqcNIS9\nNAHdaI1SafGKO2e21gei++b9P1LmD7ztxtfEWuDDiL2rgLaGl3xpme9KRWBuJEFc\nTnznptTZiJJyd1uTdqHQ2L5QcTRttWk+Xt3Yu4pQcXvExKUCENWbkL0CpUTdXQVs\nrDwfnnZoJawHCOped/YnXwGbeRpi8nqCAIpsSI34hQKBgQD+AxjZywl2mXlia4wE\nluMc5f7nuHHYvB3lWjy5nls7q2LblQ5uKkfaj86ZNL3aCb9m3vF2oUcFyDZEEbUj\nLAlcdwJOWcjQarlVI72VdPRurwbF/BGqwnw1QTmbeEDvUMotbkTH91o7RnD1ASEm\nimkTuUIni2ettKjNv4KfePDjrQKBgQDUThCW8wchcOdeNgUWhW3Pq6XKk2xFIrc4\n6xtsyTylY9sQY19/YtZ6gBamY7pToOIOLNWyijplsweDJYezLPzUTIf7bz1ISDlD\nfBPb0oewD5vN7BeWd2958zCj4Qk2RN9Ku/dnUVijqDKtkEU3zNCFCaH7gacRdjdi\nL2seeVQtDwKBgGlsX6QE4KiYigiPGk3NUfVsf58srhOF/+Jw0UM4tiTNvPnlo1eV\ntLzBcr2jZihYY1gOr6jMxu1fayZVMxil7jyyKALcwLu/j6wGaWjeYZSOkAEb3TlB\n/ssbhw0/m7O3lDHG0kUsJAb19Wu6TEfyqinFee9vrFgr4uOB2HTXfSMBAoGAGX6e\nY2If0xY50ohuJ/wx6aRVLnRxpgO7OOySyIeJ7tqE7fzg9O0rkF5dWfHT6EMDomwj\n5WLQDHJpTohtOUkHu37NPZZoJ4v0xHPb9qPbg3r8XMgjNQB2tJBNoQBfGNNAdTsJ\nRLDyEgUawNj4VvETgUZc21UAeQpXMEU9edVcFGUCgYAMQPM0usoGK/tEP8TJzeYi\nOlgFH9+rNzXUDYeYxAjlSroR8ESyoCQ8I4ZnvyMEppuHlyO3lYv1BXACGWJ/B60g\n4r6NJ9N/+ChQKentCR5Wla+yM45K0u56WNmWp98uQ9I7Has1FQvB7g+/KEaQPoJj\npeHHFaI1EAiTn3yxhr7CUw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "airflow-bigquery-connector@weather-data-ingestion-506305.iam.gserviceaccount.com",
+  "client_id": "113790878773099837901",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/airflow-bigquery-connector%40weather-data-ingestion-506305.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

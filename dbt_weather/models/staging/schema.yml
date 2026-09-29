@@ -1,0 +1,90 @@
+version: 2
+
+models:
+  - name: stg_hourly_history
+    description: >
+      ### ️ Staging View Layer: hourly Weather History
+      This view applies type-casting, text standardization, and column naming normalizations 
+      to raw payloads ingested from the OpenWeather One Call 4.0 API. 
+      
+      **Data Ingestion Cadence:** Updated hourly.
+      **Business Domain:** Regional Climate Analytics.
+    
+    # ⚡ METADATA ASSET TAGS & GROUPING:
+    # Colors your models and clusters them cleanly inside the dbt Lineage visual map
+    meta:
+      owner: "@data_platform_engineers"
+      maturity: "production"
+      data_governance_tier: "tier_1_ingestion"
+    config:
+      tags: ["staging", "hourly", "ingestion_layer"]
+
+    columns:
+      - name: observation_timestamp
+        description: "The exact UTC date and hour the meteorological weather condition physically occurred in Surrey."
+        tests:
+          - unique
+          - not_null
+
+      - name: latitude
+        description: "Precision geographic mapping latitude coordinate vector tracking Surrey boundary lines."
+        tests:
+          - not_null
+
+      - name: longitude
+        description: "Precision geographic mapping longitude coordinate vector tracking Surrey boundary lines."
+        tests:
+          - not_null
+
+      - name: timezone_name
+        description: "The localized timezone designation descriptor string (e.g., America/Vancouver)."
+
+      - name: timezone_offset
+        description: "The explicit chronological shift gap metric expressed in seconds relative to Greenwich Mean Time (GMT)."
+
+      - name: temperature_celsius
+        description: "Ambient atmospheric surface air temperature measurements recorded natively in metric Celsius units."
+
+      - name: feels_like_celsius
+        description: "The calculated apparent heat index temperature reflecting perceived human skin comfort exposure limits."
+
+      - name: relative_humidity_percentage
+        description: "Atmospheric relative humidity expressed as a whole integer percentage scale ranging from 0% to 100%."
+
+      - name: cloud_cover_percentage
+        description: "Total cloud canopy volume blocking solar radiation tracking vectors, measured from 0% to 100%."
+
+      - name: wind_speed_kmh
+        description: "Surface wind velocity metric tracking speeds continuously in kilometers per hour."
+
+      - name: weather_code
+        description: "Standardized meteorological identification index code mapped straight to global weather condition tables."
+
+      - name: dew_point_celsius
+        description: "The explicit dew point thermal threshold temperature measured in metric Celsius scales."
+
+      - name: atmospheric_pressure_hpa
+        description: "Surface barometric pressure metric calculated natively in hectopascals (hPa)."
+
+      - name: uv_index
+        description: "Solar ultraviolet radiation wave exposure risk index scale rating factors starting at 0.0."
+
+      - name: visibility_meters
+        description: "Horizontal atmospheric visual transparency depth distance. Can fall back cleanly to Null/None on perfectly clear days."
+        # ⚠️ NOTICE: No not_null test here! This safely prevents clear days from crashing your pipeline blocks.
+
+      # ️ PLATFORM GOVERNANCE METADATA AUDIT QUALITY FIREWALLS:
+      - name: ingested_at_timestamp
+        description: "The exact UTC system database loading timestamp captured when the Airflow container processed and streamed the row."
+        tests:
+          - not_null
+          
+      - name: airflow_dag_id
+        description: "The explicit identifier signature tracking which specific automated Airflow orchestrator file pipeline managed the ingestion loop."
+        tests:
+          - not_null
+          
+      - name: airflow_run_id
+        description: "The unique runtime execution token identifier key mapping this row straight back to container task worker instance logs for instant debugging."
+        tests:
+          - not_null

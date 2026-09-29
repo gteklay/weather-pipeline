@@ -1,0 +1,13 @@
+weather_profile:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      keyfile: /opt/airflow/gcp_key.json
+      project: weather-data-ingestion-506305  # ⚡ Paste your actual GCP Project ID string
+      dataset: weather_data
+      threads: 4
+      timeout_seconds: 300
+      priority: interactive
+      location: US-west1

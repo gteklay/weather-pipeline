@@ -1,0 +1,16 @@
+version: 2
+
+sources:
+  - name: weather_source
+    database: weather-data-ingestion-506305
+    schema: weather_data
+    tables:
+      - name: raw_hourly_history
+        description: "Immutable append-only cold storage table logging hourly raw API inputs and platform metadata."
+        columns:
+          - name: ingested_at
+            description: "The exact UTC timestamp when the Airflow container processed and loaded the row."
+          - name: airflow_dag_id
+            description: "The explicit identifier of the Airflow DAG loop that managed the ingestion."
+          - name: airflow_run_id
+            description: "The unique Airflow execution run token identifier mapping directly back to task instance logs."
