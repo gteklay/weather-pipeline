@@ -24,7 +24,7 @@ class SchemaCreator(BaseModel):
     dew_point: float = Field(...)
     pressure: int = Field(..., ge=800, le=1100, description="Surface barometric pressure in hPa.")
     uv_index: float = Field(..., ge=0)
-    visibility_meters: Optional[int] = Field(default=None, ge=0, description="Visibility distance. Safe fallback default if key is dropped.")
+    visibility_meters: Optional[int] = None
     observation_time: str = Field(...)
     sunrise_time: str = Field(...)
     sunset_time: str = Field(...)
