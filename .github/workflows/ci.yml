@@ -41,7 +41,7 @@ jobs:
         python -c "
         import sys
         sys.path.append('dags')
-        from dags.utils import SchemaCreator
+        from utils import SchemaCreator
         
         # Mock payload containing a dropped visibility key to simulate clear skies
         mock_payload = b'{\"lat\": 49.1900, \"lon\": -122.8400, \"timezone\": \"America/Vancouver\", \"timezone_offset\": -25200, \"data\": [{\"dt\": 1710000000, \"temp\": 14.5, \"feels_like\": 13.2, \"pressure\": 1012, \"humidity\": 65, \"dew_point\": 7.8, \"uvi\": 2.5, \"clouds\": 40, \"wind_speed\": 12.4, \"weather\": [{\"id\": 800}]}]}'
