@@ -1,18 +1,41 @@
-# 🔒 CRITICAL SECURITY EXCLUSIONS
+# ==============================================================================
+# 🔒 SENSITIVE PASSWORDS & GOVERNANCE CREDENTIAL BLOCKS
+# ==============================================================================
+gcp_key.json
+*.json
+*.env
+.env
 *.pem
 *.crt
 *.key
 *.p12
-*.json
-*.env
-gcp_key.json
 
-# Local system caches and environments
+# ==============================================================================
+# 🧼 SYSTEM RUNTIME CACHES, LOGS, & IDE METADATA
+# ==============================================================================
 __pycache__/
 *.pyc
 .pytest_cache/
 dbt_venv/
+.vscode/
+.idea/
+.DS_Store
 
-# Local dbt execution outputs
-dbt_weather/target/
+# ==============================================================================
+# 📊 DECOUPLED PIPELINE EXECUTION OUTPUT LOGS
+# ==============================================================================
+*.log
+logs/
+target/
 dbt_weather/logs/
+dbt_weather/target/
+dbt_weather/dbt_packages/
+
+# Exclude default Airflow demo examples completely
+dags/examples/
+*example_*.py
+
+# Explicitly block all automated Airflow scheduler background trace folders
+logs/
+logs/**
+logs/dag_processor/
